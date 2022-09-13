@@ -1,0 +1,58 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Simple API",
+    "description" : "API Specification for Google Maps Platform",
+    "version" : "0.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://1yxze1yk1h.execute-api.us-east-1.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : ""
+      }
+    }
+  } ],
+  "tags" : [ {
+    "name" : "Time Zone"
+  }, {
+    "name" : "Elevation"
+  }, {
+    "name" : "Street View"
+  }, {
+    "name" : "Distance Matrix"
+  }, {
+    "name" : "Geolocation"
+  }, {
+    "name" : "Roads"
+  }, {
+    "name" : "Directions"
+  }, {
+    "name" : "Geocoding"
+  }, {
+    "name" : "Places"
+  } ],
+  "paths" : {
+    "/" : {
+      "get" : {
+        "operationId" : "listVersionsv2",
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /"
+          }
+        }
+      }
+    },
+    "/v3" : {
+      "get" : {
+        "operationId" : "getVersionDetailsv2",
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /v3"
+          }
+        }
+      }
+    }
+  },
+  "x-amazon-apigateway-importexport-version" : "1.0"
+}
